@@ -72,6 +72,12 @@
     <Compile Include="Forms\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201909160628039_MenimBirinciMigrasiyam.cs" />
     <Compile Include="Migrations\201909160628039_MenimBirinciMigrasiyam.Designer.cs">
       <DependentUpon>201909160628039_MenimBirinciMigrasiyam.cs</DependentUpon>
@@ -84,9 +90,19 @@
     <Compile Include="Migrations\201909160828289_MenuItemsPriceAdded.Designer.cs">
       <DependentUpon>201909160828289_MenuItemsPriceAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909170628050_OrderAndOrderItemsCreated.cs" />
+    <Compile Include="Migrations\201909170628050_OrderAndOrderItemsCreated.Designer.cs">
+      <DependentUpon>201909170628050_OrderAndOrderItemsCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909170634008_OrderItemsAddedToOrderModel.cs" />
+    <Compile Include="Migrations\201909170634008_OrderItemsAddedToOrderModel.Designer.cs">
+      <DependentUpon>201909170634008_OrderItemsAddedToOrderModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MenuCategory.cs" />
     <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Dashboard.resx">
@@ -98,6 +114,9 @@
     <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909160628039_MenimBirinciMigrasiyam.resx">
       <DependentUpon>201909160628039_MenimBirinciMigrasiyam.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909160828289_MenuItemsPriceAdded.resx">
       <DependentUpon>201909160828289_MenuItemsPriceAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909170628050_OrderAndOrderItemsCreated.resx">
+      <DependentUpon>201909170628050_OrderAndOrderItemsCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909170634008_OrderItemsAddedToOrderModel.resx">
+      <DependentUpon>201909170634008_OrderItemsAddedToOrderModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

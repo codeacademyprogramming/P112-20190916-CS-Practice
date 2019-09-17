@@ -29,5 +29,11 @@ namespace PracticeProject.Forms
             MenuForm menuForm = new MenuForm();
             menuForm.ShowDialog();
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.ShowDialog();
+        }
     }
 }

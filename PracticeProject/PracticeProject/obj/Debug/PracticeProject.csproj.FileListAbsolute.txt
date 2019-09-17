@@ -18,3 +18,6 @@ C:\Users\sattar\Desktop\P112\C#\20190916\PracticeProject\PracticeProject\obj\Deb
 C:\Users\sattar\Desktop\P112\C#\20190916\PracticeProject\PracticeProject\obj\Debug\PracticeProject.Migrations.MenimBirinciMigrasiyam.resources
 C:\Users\sattar\Desktop\P112\C#\20190916\PracticeProject\PracticeProject\obj\Debug\PracticeProject.Migrations.MenuItemsTableCreated.resources
 C:\Users\sattar\Desktop\P112\C#\20190916\PracticeProject\PracticeProject\obj\Debug\PracticeProject.Migrations.MenuItemsPriceAdded.resources
+C:\Users\sattar\Desktop\P112\C#\20190916\PracticeProject\PracticeProject\obj\Debug\PracticeProject.Migrations.OrderAndOrderItemsCreated.resources
+C:\Users\sattar\Desktop\P112\C#\20190916\PracticeProject\PracticeProject\obj\Debug\PracticeProject.Migrations.OrderItemsAddedToOrderModel.resources
+C:\Users\sattar\Desktop\P112\C#\20190916\PracticeProject\PracticeProject\obj\Debug\PracticeProject.Forms.OrderForm.resources

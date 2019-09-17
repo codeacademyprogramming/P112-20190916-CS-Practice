@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvCategories = new System.Windows.Forms.DataGridView();
+            this.dgvMenuItems = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -38,28 +42,50 @@
             this.txtItemPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbxItemCategory = new System.Windows.Forms.ComboBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenuItems)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvCategories
+            // dgvMenuItems
             // 
-            this.dgvCategories.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategories.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMenuItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMenuItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMenuItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.ItemName,
             this.ItemPrice,
             this.ItemCategory});
-            this.dgvCategories.Location = new System.Drawing.Point(12, 167);
-            this.dgvCategories.Name = "dgvCategories";
-            this.dgvCategories.RowHeadersWidth = 62;
-            this.dgvCategories.RowTemplate.Height = 28;
-            this.dgvCategories.Size = new System.Drawing.Size(581, 375);
-            this.dgvCategories.TabIndex = 8;
+            this.dgvMenuItems.Location = new System.Drawing.Point(12, 167);
+            this.dgvMenuItems.Name = "dgvMenuItems";
+            this.dgvMenuItems.RowHeadersWidth = 62;
+            this.dgvMenuItems.RowTemplate.Height = 28;
+            this.dgvMenuItems.Size = new System.Drawing.Size(581, 375);
+            this.dgvMenuItems.TabIndex = 8;
+            this.dgvMenuItems.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMenuItems_RowHeaderMouseDoubleClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 8;
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "Adı";
+            this.ItemName.MinimumWidth = 8;
+            this.ItemName.Name = "ItemName";
+            // 
+            // ItemPrice
+            // 
+            this.ItemPrice.HeaderText = "Qiymət";
+            this.ItemPrice.MinimumWidth = 8;
+            this.ItemPrice.Name = "ItemPrice";
+            // 
+            // ItemCategory
+            // 
+            this.ItemCategory.HeaderText = "Kateqoriya";
+            this.ItemCategory.MinimumWidth = 8;
+            this.ItemCategory.Name = "ItemCategory";
             // 
             // label1
             // 
@@ -87,6 +113,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -96,6 +123,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Yenilə";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -140,31 +168,6 @@
             this.cbxItemCategory.Size = new System.Drawing.Size(197, 28);
             this.cbxItemCategory.TabIndex = 16;
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 8;
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // ItemName
-            // 
-            this.ItemName.HeaderText = "Adı";
-            this.ItemName.MinimumWidth = 8;
-            this.ItemName.Name = "ItemName";
-            // 
-            // ItemPrice
-            // 
-            this.ItemPrice.HeaderText = "Qiymət";
-            this.ItemPrice.MinimumWidth = 8;
-            this.ItemPrice.Name = "ItemPrice";
-            // 
-            // ItemCategory
-            // 
-            this.ItemCategory.HeaderText = "Kateqoriya";
-            this.ItemCategory.MinimumWidth = 8;
-            this.ItemCategory.Name = "ItemCategory";
-            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -174,7 +177,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtItemPrice);
-            this.Controls.Add(this.dgvCategories);
+            this.Controls.Add(this.dgvMenuItems);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.btnDelete);
@@ -183,7 +186,7 @@
             this.Name = "MenuForm";
             this.Text = "MenuForm";
             this.Load += new System.EventHandler(this.MenuForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenuItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +194,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvCategories;
+        private System.Windows.Forms.DataGridView dgvMenuItems;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Button btnDelete;
